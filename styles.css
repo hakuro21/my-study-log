@@ -249,6 +249,13 @@ textarea:focus {
   font-size: 0.82rem;
 }
 
+.privacy-note {
+  margin: -5px 0 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
 .action-row {
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -512,16 +519,79 @@ textarea:focus {
 }
 
 @media (max-width: 560px) {
+  .app-shell {
+    gap: 10px;
+    width: min(640px, calc(100% - 16px));
+    padding: 8px 0 12px;
+  }
+
   .editor-panel,
   .history-panel {
-    padding: 18px;
+    padding: 12px;
   }
 
   .brand-row,
   .history-header,
   .list-tools {
-    align-items: stretch;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .brand-row,
+  .history-header {
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .diary-form {
+    gap: 8px;
+  }
+
+  .mood-field {
+    margin-top: 0;
+  }
+
+  .mood-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 4px;
+    margin-top: 6px;
+  }
+
+  .mood-option {
+    min-height: 58px;
+    gap: 3px;
+    padding: 4px 2px;
+    font-size: 0.64rem;
+    line-height: 1.2;
+  }
+
+  .mood-face {
+    font-size: 1.2rem;
+  }
+
+  textarea {
+    min-height: 64px;
+    padding: 8px;
+    line-height: 1.45;
+  }
+
+  .action-row {
+    gap: 6px;
+    margin-top: 0;
+  }
+
+  .primary-button,
+  .ghost-button {
+    min-height: 40px;
+    padding: 0 10px;
   }
 
   .save-state,
@@ -529,21 +599,32 @@ textarea:focus {
     align-self: flex-start;
   }
 
-  .mood-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .history-panel .biorhythm,
+  .history-panel .summary-row {
+    display: none;
   }
 
-  .mood-option {
-    min-height: 76px;
+  .history-panel .list-tools {
+    gap: 6px;
+    margin-bottom: 8px;
   }
 
   .list-tools select {
-    flex-basis: auto;
+    flex: 0 0 138px;
   }
 
-  .primary-button,
-  .ghost-button {
-    flex: 1 1 150px;
+  .entry-list {
+    max-height: 150px;
+    overflow-y: auto;
+  }
+
+  .entry-card {
+    gap: 6px;
+    padding: 10px;
+  }
+
+  .empty-state {
+    padding: 12px;
   }
 }
     
